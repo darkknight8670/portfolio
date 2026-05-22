@@ -1,0 +1,53 @@
+Email: 23bcs263@iiitdmj.ac.in 
+Mobile: +91-7357568670
+Vikas Barupal
+Portfolio: https://www.linkedin.com/in/vikas-barupal-3a754129b/
+Github: https://github.com/darkknight8670
+
+Education:
+Indian Institute Of Information Technology, Jabalpur
+Bachelor of Technology in Computer Science | GPA: 7.3
+Madhya Pradesh, India | August 2023–May 2027
+Courses: Operating System, Data Structures Algorithms, Computer Networks, Data Base Management System
+
+Skills Summary:
+• Languages: C++, JavaScript, SQL
+• Frameworks: ExpressJS , ReactJs , NodeJs, Redux Toolkit, TailWindCss
+• Tools: GIT, GitHub , MongoDB , MySQL
+• Soft Skills: Leadership, Event Management, Writing, Public Speaking
+
+Experience:
+Remote Full Stack Web Developer
+MAREVLO | June 2024 – July 2024
+• Developed and maintained 5+ interactive web applications using the MERN stack, refactoring 10,000+ lines of code to enhance performance.
+• Collaborated with 2+ cross-functional teams to deliver scalable and user-focused solutions, improving workflow efficiency and code re-usability.
+• Optimized 10+ database queries, reducing API response time and improving overall system efficiency.
+
+Coding Profile:
+• Specialist on CodeForces, with a decent rating of 1441.
+• Rated 1657 on CodeChef with 3 stars.
+• Solved over 400+ problems from LeetCode, GFG, Code360.
+
+Projects:
+1. CODESYNC | React, Nodejs, Expressjs, Monaco Editor, GetStream.Io | December 2024
+• Built and deployed a full-stack web application enabling video calls between interviewers and candidates. Refactored 1,000+ lines of code for maintainability.
+• Implemented 5+ features for creating, joining, scheduling, and recording interviews, streamlining the technical hiring process.
+• Developed an in-browser code compiler, allowing candidates to write code in 4+ languages during interviews.
+
+2. CODECRAFT | ReactJS, NodeJs, ExpressJs, Monaco Editor | August 2024
+• Engineered and implemented a web-based code editor with multi-language support and real-time code execution. Reduced code complexity, improving overall maintainability and performance.
+• Integrated syntax highlighting, autocompletion, and error detection, alongside customizable themes and file management for a seamless coding experience.
+
+3. POKEDEX | ReactJS, Redux Toolkit, JavaScript, Nodejs, ExpressJs, Mongodb | May 2024
+• Integrated 1,500+ Pokemon records via API. Web app for kids to explore, search, and compare different Pokemon, enhancing user engagement with interactive search, filtering, and comparison tools.
+• Integrated Google Login and Signup functionality for seamless user authentication, enabling personalized Pokemon collections.
+
+4. Fusion IIIT | React, HTML5, CSS, MongoDB | February 2025 - Present
+• Developed the Department module of the Fusion web app for IIIT Jabalpur using React for frontend, enabling efficient departmental data state management.
+• Integrated RESTful APIs and built dynamic UIs to enhance user experience and streamline admin workflows.
+
+Achievements:
+• Achieved a Global Rank 502 in CodeForces Round 1002 Div 2.
+• Ranked among the top 5% in the NPTEL Ethical Hacking course and was awarded a Silver Medal.
+• Awarded the Merit-Cum-Means Scholarship (2 consecutive years), for excellent academic performance.
+• Earned C++ Programming certification from Udemy, showcasing proficiency in object-oriented development.

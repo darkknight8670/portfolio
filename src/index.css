@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --font-sans: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-primary: hsl(222, 47%, 6%);
+  --bg-secondary: hsl(222, 47%, 10%);
+  --bg-tertiary: hsl(222, 47%, 14%);
+  
+  --accent-emerald: hsl(166, 100%, 46%);
+  --accent-emerald-glow: hsla(166, 100%, 46%, 0.15);
+  --accent-cyan: hsl(190, 100%, 48%);
+  --accent-cyan-glow: hsla(190, 100%, 48%, 0.15);
+  
+  --text-main: hsl(210, 40%, 98%);
+  --text-secondary: hsl(215, 20%, 75%);
+  --text-muted: hsl(215, 15%, 55%);
+  
+  --border-glass: rgba(255, 255, 255, 0.07);
+  --bg-glass: rgba(10, 17, 34, 0.65);
+  --bg-glass-hover: rgba(16, 26, 50, 0.8);
+  --shadow-neon: 0 0 25px rgba(166, 100, 46, 0.25);
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  border: 1px solid var(--border-glass);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-emerald);
+}
+
+/* Matrix/Grid Overlay Background */
+.bg-grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.bg-radial-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, hsla(166, 100%, 46%, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, hsla(190, 100%, 48%, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, hsla(222, 47%, 6%, 1) 0%, var(--bg-primary) 100%);
+  z-index: -9;
+  pointer-events: none;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.glass-panel:hover {
+  background: var(--bg-glass-hover);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.glass-card-interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card-interactive::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.04) 50%, 
+    transparent
+  );
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.glass-card-interactive:hover::after {
+  left: 200%;
+}
+
+/* Utility Layouts */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-emerald), var(--accent-cyan));
+  border-radius: 2px;
+}
+
+/* Custom UI Glow Elements */
+.glowing-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-emerald), 0 0 20px var(--accent-emerald);
+  display: inline-block;
+  animation: pulse-glow 2s infinite;
+}
+
+.glow-btn {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--accent-emerald);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 15px rgba(166, 100, 46, 0.05);
+}
+
+.glow-btn:hover {
+  background: var(--accent-emerald);
+  color: var(--bg-primary);
+  box-shadow: 0 0 20px rgba(166, 100, 46, 0.4);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border: 1px solid var(--border-glass);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-animate {
+  animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Floating background orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -5;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Shimmer grid classes */
+.shimmer-card {
+  position: relative;
+}
+.shimmer-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, var(--accent-emerald), var(--accent-cyan), transparent);
+  border-radius: 17px;
+  z-index: -1;
+  opacity: 0.15;
+  transition: var(--transition-smooth);
+}
+.shimmer-card:hover::before {
+  opacity: 0.45;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 60px 16px;
+  }
+}
